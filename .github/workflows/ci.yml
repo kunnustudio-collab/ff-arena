@@ -66,14 +66,11 @@ jobs:
           channel: 'stable'
           cache: true
 
-      - name: Install Flutter Dependencies
+      - name: Prepare Android Project & Build Release APK
         run: |
           cd mobile-app
+          flutter create --platforms=android --org com.tournamentx .
           flutter pub get
-
-      - name: Build Release APK
-        run: |
-          cd mobile-app
           flutter build apk --release --no-tree-shake-icons
 
       - name: Upload APK to GitHub Artifacts
