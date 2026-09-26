@@ -9,10 +9,22 @@
 
 | Service | Local URL | Default Login | Password / OTP |
 | :--- | :--- | :--- | :--- |
+| **Android Release APK** | `release-apk/app-release.apk` | - | [Download from GitHub Actions](https://github.com/kunnustudio-collab/ff-arena/actions/runs/36261919380) |
 | **Backend API** | `http://localhost:5000` | - | Health: `http://localhost:5000/health` |
 | **Admin Web Panel** | `http://localhost:3000` (or `http://localhost:5173`) | `admin@tournamentx.com` | Password: `Admin@123456`<br>2FA OTP: `123456` |
 | **Demo Player 1** | Mobile App | `9876543210` / `player1@tournamentx.com` | Password: `Password@123`<br>OTP: `123456` |
 | **Demo Player 2** | Mobile App | `9876543211` / `player2@tournamentx.com` | Password: `Password@123`<br>OTP: `123456` |
+
+---
+
+### 📲 Ready-to-Install Android App (.APK)
+Aapka Android APK successfully ban chuka hai! Aap ise 2 jagah se le sakte hain:
+1. **Direct Local Folder me:**  
+   `C:\Users\Awara\Desktop\ff arena\release-apk\app-release.apk`  
+   *(Ise direct apne Android phone me copy karke install kar sakte hain!)*
+2. **GitHub Actions se Download:**  
+   👉 [Download TournamentX-Android-APK (Run #36261919380)](https://github.com/kunnustudio-collab/ff-arena/actions/runs/36261919380)  
+   *(Page ke bottom me **Artifacts** section me `TournamentX-Android-APK` par click karein)*
 
 ---
 
