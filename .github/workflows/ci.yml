@@ -66,15 +66,31 @@ jobs:
           channel: 'stable'
           cache: true
 
-      - name: Prepare Clean Android Platform and Build Release APK
+      - name: Generate Android Platform
         run: |
           cd mobile-app
-          # Cleanly initialize standard Android Gradle wrapper for Flutter 3.22 runner
           rm -rf android
           flutter create --platforms=android --project-name tournament_x --org com.tournamentx .
-          # Inject internet permission
-          sed -i '/<application/i \    <uses-permission android:name="android.permission.INTERNET"/>\n    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>' android/app/src/main/AndroidManifest.xml
+
+      - name: Inject Android Permissions
+        run: |
+          python3 -c "
+          with open('mobile-app/android/app/src/main/AndroidManifest.xml', 'r') as f:
+              content = f.read()
+          if 'android.permission.INTERNET' not in content:
+              content = content.replace('<application', '    <uses-permission android:name=\"android.permission.INTERNET\"/>\n    <uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>\n    <application')
+              with open('mobile-app/android/app/src/main/AndroidManifest.xml', 'w') as f:
+                  f.write(content)
+          "
+
+      - name: Install Flutter Dependencies
+        run: |
+          cd mobile-app
           flutter pub get
+
+      - name: Compile Flutter Release APK
+        run: |
+          cd mobile-app
           flutter build apk --release --no-tree-shake-icons
 
       - name: Upload APK to GitHub Artifacts

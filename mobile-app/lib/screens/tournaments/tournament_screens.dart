@@ -159,7 +159,7 @@ class TournamentDetailScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.between,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       StatusBadge(status: tournament.status),
                       Container(
@@ -271,7 +271,7 @@ class TournamentDetailScreen extends StatelessWidget {
 
   static Widget _buildPrizeRow(String rank, String prize, Color prizeColor, bool isFirst) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.between,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Row(
           children: [
@@ -315,7 +315,7 @@ class TournamentDetailScreen extends StatelessWidget {
                 padding: const EdgeInsets.all(12),
                 decoration: BoxDecoration(color: AppTheme.surfaceElevated, borderRadius: BorderRadius.circular(10)),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.between,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     const Text('Wallet Balance Available', style: TextStyle(color: AppTheme.textSecondary, fontSize: 12)),
                     Text('₹${ApiService().currentWallet.totalBalance.toStringAsFixed(2)}', style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),

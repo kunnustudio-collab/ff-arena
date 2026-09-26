@@ -67,7 +67,7 @@ class _MyMatchesScreenState extends State<MyMatchesScreen> with SingleTickerProv
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
-                mainAxisAlignment: MainAxisAlignment.between,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: const [
                   StatusBadge(status: 'OPEN'),
                   Text('SOLO • BERMUDA', style: TextStyle(color: AppTheme.neonCyan, fontSize: 11, fontWeight: FontWeight.bold)),
@@ -120,7 +120,7 @@ class _MyMatchesScreenState extends State<MyMatchesScreen> with SingleTickerProv
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
-                mainAxisAlignment: MainAxisAlignment.between,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: const [
                   StatusBadge(status: 'LIVE'),
                   Text('SOLO • KALAHARI', style: TextStyle(color: AppTheme.accentRed, fontSize: 11, fontWeight: FontWeight.bold)),
@@ -169,7 +169,7 @@ class _MyMatchesScreenState extends State<MyMatchesScreen> with SingleTickerProv
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
-                mainAxisAlignment: MainAxisAlignment.between,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: const [
                   StatusBadge(status: 'COMPLETED'),
                   Text('RANK #1 • ₹400 WON', style: TextStyle(color: AppTheme.neonGold, fontSize: 12, fontWeight: FontWeight.bold)),
@@ -269,7 +269,7 @@ class RoomCredentialsScreen extends StatelessWidget {
         border: Border.all(color: AppTheme.surfaceBorder),
       ),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.between,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,

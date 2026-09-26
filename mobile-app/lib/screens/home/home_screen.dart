@@ -57,7 +57,7 @@ class _HomeScreenState extends State<HomeScreen> {
               children: [
                 // Top Header Row
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.between,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Row(
                       children: [
@@ -163,7 +163,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
                 // Featured Live Tournaments
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.between,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     const Text('LIVE & FEATURED MATCHES', style: TextStyle(color: Colors.white, fontSize: 15, fontWeight: FontWeight.bold, letterSpacing: 0.5)),
                     TextButton(

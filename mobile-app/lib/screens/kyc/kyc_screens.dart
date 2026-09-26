@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../core/theme/app_theme.dart';
+import '../../models/models.dart';
 import '../../services/api_service.dart';
 import '../../widgets/custom_widgets.dart';
 
@@ -97,7 +98,7 @@ class KycIntroScreen extends StatelessWidget {
 
   static Widget _buildKycRow(String label, String value) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.between,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(label, style: const TextStyle(color: AppTheme.textSecondary, fontSize: 12)),
         Text(value, style: const TextStyle(color: Colors.white, fontSize: 13, fontWeight: FontWeight.bold)),

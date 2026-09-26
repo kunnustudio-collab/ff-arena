@@ -107,7 +107,7 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
                   child: GlassCard(
                     padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.between,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Row(
                           children: [

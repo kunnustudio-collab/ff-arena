@@ -88,7 +88,7 @@ class _WalletScreenState extends State<WalletScreen> {
 
             // Transactions Header
             Row(
-              mainAxisAlignment: MainAxisAlignment.between,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 const Text('RECENT TRANSACTIONS', style: TextStyle(color: Colors.white, fontSize: 14, fontWeight: FontWeight.bold)),
                 TextButton(
@@ -109,7 +109,7 @@ class _WalletScreenState extends State<WalletScreen> {
                 child: GlassCard(
                   padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.between,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Row(
                         children: [
@@ -157,7 +157,7 @@ class _WalletScreenState extends State<WalletScreen> {
 
   Widget _buildBalanceTile(String title, String amount, String subtitle, Color amountColor) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.between,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -305,7 +305,7 @@ class _WithdrawScreenState extends State<WithdrawScreen> {
           children: [
             GlassCard(
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.between,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   const Text('Eligible Winnings Balance', style: TextStyle(color: AppTheme.textSecondary, fontSize: 13)),
                   Text('₹${winnings.toStringAsFixed(2)}', style: const TextStyle(color: AppTheme.neonGold, fontSize: 18, fontWeight: FontWeight.bold)),
@@ -351,7 +351,7 @@ class _WithdrawScreenState extends State<WithdrawScreen> {
               child: Column(
                 children: [
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.between,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       const Text('Processing Fee (2%)', style: TextStyle(color: AppTheme.textSecondary, fontSize: 12)),
                       Text('₹${fee.toStringAsFixed(2)}', style: const TextStyle(color: Colors.white, fontSize: 12)),
@@ -359,7 +359,7 @@ class _WithdrawScreenState extends State<WithdrawScreen> {
                   ),
                   const Divider(color: AppTheme.surfaceBorder, height: 16),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.between,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       const Text('Net Payout to Account', style: TextStyle(color: Colors.white, fontSize: 13, fontWeight: FontWeight.bold)),
                       Text('₹${net.toStringAsFixed(2)}', style: const TextStyle(color: AppTheme.accentGreen, fontSize: 15, fontWeight: FontWeight.bold)),
@@ -416,7 +416,7 @@ class TransactionsScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.between,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(item.category, style: const TextStyle(color: AppTheme.neonCyan, fontSize: 11, fontWeight: FontWeight.bold)),
                       Text(
@@ -433,7 +433,7 @@ class TransactionsScreen extends StatelessWidget {
                   Text(item.description, style: const TextStyle(color: Colors.white, fontSize: 13)),
                   const SizedBox(height: 6),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.between,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(item.transactionId, style: const TextStyle(color: AppTheme.textMuted, fontSize: 10, fontFamily: 'monospace')),
                       Text('Balance after: ₹${item.balanceAfter.toStringAsFixed(2)}', style: const TextStyle(color: AppTheme.textSecondary, fontSize: 10)),
